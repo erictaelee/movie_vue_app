@@ -26,6 +26,10 @@ export default {
   methods: {
     moviesIndex: function () {
       console.log("in movies index");
+      axios.get("http://localhost:3000/api/movies").then((response) => {
+        console.log(response.data);
+        this.movies = response.data;
+      });
     },
   },
 };
