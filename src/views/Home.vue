@@ -18,11 +18,14 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Welcome to Vue.js!!",
       movies: [],
     };
   },
-  created: function () {},
+  created: function () {
+    console.log("in created..");
+    this.moviesIndex();
+  },
   methods: {
     moviesIndex: function () {
       console.log("in movies index");
